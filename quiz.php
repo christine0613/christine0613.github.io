@@ -23,7 +23,7 @@
 						<div class="quiz-question">
 							<label>1. Ảnh này chụp ở đâu?</label>
 						</div>
-						<img src="pictures/1.jpg">
+						<img src="1.jpg">
 						<div class="quiz-answer">
 							<input type="text" name="answer1" class="form-control" required>
 						</div>
@@ -32,7 +32,7 @@
 						<div class="quiz-question">
 							<label>2. Ảnh này được lấy từ poster của phim gì?</label>
 						</div>
-						<img src="pictures/2.jpg">
+						<img src="2.jpg">
 						<div class="quiz-answer">
 							<input type="text" name="answer2" class="form-control" required>
 						</div>
@@ -65,7 +65,7 @@
 						<div class="quiz-question">
 							<label>6. Tên escape game chúng ta từng chơi?</label>
 						</div>
-						<img src="pictures/3.jpg">
+						<img src="3.jpg">
 						<div class="quiz-answer">
 							<input type="text" name="answer6" class="form-control" required>
 						</div>
@@ -104,7 +104,7 @@
 						<div class="quiz-question">
 							<label>10. Ai là người gửi tin nhắn này?</label>
 						</div>
-						<img src="pictures/10.png">
+						<img src="10.png">
 						<div class="quiz-answer">
 							<input type="text" name="answer10" class="form-control" required>
 						</div>
