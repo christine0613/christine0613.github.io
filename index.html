@@ -1,7 +1,3 @@
-<?php 
-	session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,12 +28,12 @@
 				<div class="form-group">
 					<label>User ID: </label>
 					<br>
-					<input type="text" name="user" class="form-control">
+					<input type="text" name="user" class="form-control" required>
 				</div>
 				<div class="form-group">
 					<label>Password: </label>
 					<br>
-					<input type="password" name="password" class="form-control">
+					<input type="password" name="password" class="form-control" required>
 				</div>
 				<input type="submit" name="submit" class="submit-btn">
 			</form>
@@ -45,25 +41,11 @@
 		
 	</div>
 	<?php
-		if (isset($_SESSION['errors'])) {
-			foreach ($_SESSION['errors'] as $error) {
-				echo $error;
-			}
-		}
-	?>
-	<?php
-		if (isset($_POST['user']) && isset($_POST['password'])) {
-			$userId = $_POST['user'];
-			$password = $_POST['password'];
-			$_SESSION['errors'] = [];
-
 			if ($userId != "teddydo") {
 				array_push($_SESSION['errors'], "Wrong User ID!");	
 			} elseif ($password != "DoctorMike") {
 				array_push($_SESSION['errors'], "Wrong Password!");
 			} elseif ($userId == "teddydo" && $password == "DoctorMike") {
-				$_SESSION['user'] = $userId;
-				$_SESSION['password'] = $password;
 				header("Location: mainpage.html");
 				exit;
 			}
