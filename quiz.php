@@ -14,6 +14,9 @@
 			</header>
 		</div>
 		<div class="content-container">
+			<div class="notice">
+				<h1>ĐIỀN FORM BẰNG TIẾNG VIỆT KHÔNG DẤU!</h1>
+			</div>
 			<div class="form-container">
 				<form action="processQuiz.php" method="POST">
 					<div class="form-group">
