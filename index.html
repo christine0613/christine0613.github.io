@@ -41,15 +41,10 @@
 		
 	</div>
 	<?php
-			if ($userId != "teddydo") {
-				array_push($_SESSION['errors'], "Wrong User ID!");	
-			} elseif ($password != "DoctorMike") {
-				array_push($_SESSION['errors'], "Wrong Password!");
-			} elseif ($userId == "teddydo" && $password == "DoctorMike") {
+			if ($userId == "teddydo" && $password == "DoctorMike") {
 				header("Location: mainpage.html");
 				exit;
 			}
-		}
 	?>
 </body>
 </html>
