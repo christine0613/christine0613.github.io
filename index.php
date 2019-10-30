@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +16,16 @@
 				<div class="header-left"></div>
 				<div class="header-right"></div>
 			</header>
+		</div>
+		<div class="notice">
+			<h1>Trước khi bắt đầu, mày phải đọc kĩ cái này: </h1>
+			<ul>
+				<li>Vì tao code vội, nên không protect tất cả các files. Vì thế, mày <span style="color: red;">HÃY TRUNG THỰC VÀ CHỈ LOG IN DUY NHẤT MỘT LẦN!</span></li>
+				<li>Ở phần cuối, mày có thể bấm nút đến khi mày thích, rồi sau đó làm theo hướng dẫn và đó sẽ được coi là lần cuối cùng.</li>
+				<li>Trang web này sẽ được gỡ sau 31/10/2019 11:59PM (GMT +8)</li>
+				<li>Sắp xếp lại từ sau để tìm user ID: dddeoty</li>
+				<li>Password: the hottest doctor in the world (viết hoa các chữ cái đầu)</li>
+			</ul
 		</div>
 		<div class="form-container">
 			<form action="index.php" method="POST">
