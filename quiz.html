@@ -4,37 +4,34 @@
 	<title>Teddy 해인 Do - Quiz</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<script src="https://kit.fontawesome.com/129e7cf8b7.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="container">
 		<div class="header-container">
 			<header class="page-header">
-				<div class="header-left"></div>
-				<div class="header-right"></div>
+				<h1>VIẾT CÂU TRẢ LỜI BẰNG TIẾNG VIỆT KHÔNG DẤU</h1>
 			</header>
 		</div>
 		<div class="content-container">
-			<div class="notice">
-				<h1>ĐIỀN FORM BẰNG TIẾNG VIỆT KHÔNG DẤU!</h1>
-			</div>
 			<div class="form-container">
-				<form action="processQuiz.php" method="POST">
+				<form>
 					<div class="form-group">
 						<div class="quiz-question">
 							<label>1. Ảnh này chụp ở đâu?</label>
 						</div>
-						<img src="1.jpg">
+						<img src="pictures/1.jpg">
 						<div class="quiz-answer">
-							<input type="text" name="answer1" class="form-control" required>
+							<input type="text" name="answer1" id="answer1" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="quiz-question">
 							<label>2. Ảnh này được lấy từ poster của phim gì?</label>
 						</div>
-						<img src="2.jpg">
+						<img src="pictures/2.jpg">
 						<div class="quiz-answer">
-							<input type="text" name="answer2" class="form-control" required>
+							<input type="text" name="answer2" id="answer2" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">
@@ -42,7 +39,7 @@
 							<label>3. Điền vào chỗ trống</label>
 						</div>
 						<div class="quiz-answer">
-							Gián <input type="text" name="answer3" class="form-control" required>
+							Gián <input type="text" name="answer3" id="answer3" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">
@@ -50,7 +47,7 @@
 							<label>4. Cân bằng phương trình? <span>H<sub>2</sub>SO<sub>4</sub> + 2NaOH <i class="fas fa-arrow-right"></i> ? + Na<sub>2</sub>SO<sub>4</sub></span></label>
 						</div>
 						<div class="quiz-answer">
-							<input type="text" name="answer4" class="form-control" required>
+							<input type="text" name="answer4" id="answer4" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">
@@ -58,16 +55,16 @@
 							<label>5. Hội chứng Down bị gây ra bởi NST gì?</label>
 						</div>
 						<div class="quiz-answer">
-							<input type="text" name="answer5" class="form-control" required>
+							<input type="text" name="answer5" id="answer5" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="quiz-question">
 							<label>6. Tên escape game chúng ta từng chơi?</label>
 						</div>
-						<img src="3.jpg">
+						<img src="pictures/3.jpg">
 						<div class="quiz-answer">
-							<input type="text" name="answer6" class="form-control" required>
+							<input type="text" name="answer6" id="answer6" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">
@@ -75,7 +72,7 @@
 							<label>7. Cho hình chóp tứ giác đều S.ABCD có cạnh đáy bằng <i>a</i>, cạnh bên bằng <i>(a căn 5)/2</i>. Gọi O là tâm của ABCD. Tính góc giữa mặt bên (ABC) và mặt đáy (ABCD)?</label>
 						</div>
 						<div class="quiz-answer">
-							<input type="number" name="answer7" class="form-control" required>
+							<input type="number" name="answer7" id="answer7" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">
@@ -86,33 +83,111 @@
 							<source src="bdaysong.mp3" type="audio/mpeg">
 						</audio>
 						<div class="quiz-answer">
-							<input type="text" name="answer8" class="form-control" required>
+							<input type="text" name="answer8" id="answer8" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="quiz-question">
-							<label>9. Đồ uống yêu thích của tao là gì?</label>
+							<label>9. Đồ uống yêu thích của tao là gì? (Mxxx Chxxxxxxe)</label>
 						</div>
 						<div class="quiz-answer">
-							<input type="radio" name="answer9" class="form-control-radio" value="Cappuccino" required>Cappuccino
-							<input type="radio" name="answer9" class="form-control-radio" value="mintchoco" required>Mint Chocolate
-							<input type="radio" name="answer9" class="form-control-radio" value="latte" required>Latte
-							<input type="radio" name="answer9" class="form-control-radio" value="mochalatte" required>Mocha Latte
+							<input type="text" name="answer9" id="answer9" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="quiz-question">
 							<label>10. Ai là người gửi tin nhắn này?</label>
 						</div>
-						<img src="10.png">
+						<img src="pictures/10.png">
 						<div class="quiz-answer">
-							<input type="text" name="answer10" class="form-control" required>
+							<input type="text" name="answer10" id="answer10" class="form-control" required>
 						</div>
 					</div>
-					<input type="submit" name="submit" value="Nộp bài!">
+					<input type="button" name="submit" value="Nộp bài!" class="submit-btn">
 				</form>
+			</div>
+			<div class="reward-container" id="reward-container">
+				<h1 id="reward-score"></h1>
+				<h1>Mày có thể quay bao nhiêu lần mày thích</h1>
+				<input type="button" name="reward" class="reward-btn" value="Quay quà đi mày!">
+			</div>
+			<div id="reward-show">
+				<h2 id="show-content1"></h2>
+				<h2 id="show-content2"></h2>
+				<h2 id="show-confirm"></h2>
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		let score = 0;
+
+		$('.submit-btn').click(function(){
+			if ($('#answer1').val().toLowerCase() == 'note coffee' || $('#answer1').val().toLowerCase() == 'the note coffee') {
+				score += 100;
+			}
+			if ($('#answer2').val().toLowerCase() == 'doctor who') {
+				score += 100;
+			}
+			if ($('#answer3').val().toLowerCase() == 'chuong') {
+				score += 100;
+			}
+			if ($('#answer4').val().toLowerCase() == '2h2o') {
+				score += 100;
+			}
+			if ($('#answer5').val().toLowerCase() == '21' || $('#answer5').val().toLowerCase() == 21) {
+				score += 100;
+			}
+			if ($('#answer6').val().toLowerCase() == 'decode') {
+				score += 100;
+			}
+			if ($('#answer7').val().toLowerCase() == 60 || $('#answer7').val().toLowerCase() == '60') {
+				score += 100;
+			}
+			if ($('#answer8').val().toLowerCase() == 'jason mraz') {
+				score += 100;
+			}
+			if ($('#answer9').val().toLowerCase() == 'mint chocolate') {
+				score += 100;
+			}
+			if ($('#answer10').val().toLowerCase() == 'hoang hung' || $('#answer10').val().toLowerCase() == 'hung') {
+				score += 100;
+			}
+			console.log(score);
+			document.getElementById('reward-container').style.display = "block";
+			document.getElementById('reward-score').innerHTML = "Mày có " + score + " điểm";
+		});
+
+		$('.reward-btn').click(function(){
+			let small = ['01 cốc trà sữa', '01 gói bim bim', '01 bát bún', '01 đĩa cơm rang', '15 phút hát karaoke ở booth'];
+			let medium = ['01 cốc trà sữa', '01 gói bim bim', '01 bát bún', '01 đĩa cơm rang', '15 phút hát karaoke ở booth', '30 phút hát karaoke ở booth', '01 mặt nạ đất sét Aztec', '01 hộp mặt nạ My Beauty Diary'];
+			let big = ['01 cốc trà sữa', '01 gói bim bim', '01 bát bún', '01 đĩa cơm rang', '15 phút hát karaoke ở booth', '30 phút hát karaoke ở booth', '01 mặt nạ đất sét Aztec', '01 hộp mặt nạ My Beauty Diary', '01 chai sữa tắm', '01 hộp chocolate', '01 thỏi son'];
+
+			console.log(score);
+			let item1;
+			let item2;
+
+			if (0 < score && score < 300){
+				item1 = small[Math.floor(Math.random()*small.length)];
+				document.getElementById('reward-show').style.display = "block";
+				document.getElementById("show-content1").innerHTML = item1;
+				document.getElementById("show-confirm").innerHTML = "Để confirm nhận quà hãy screenshot màn hình này và gửi cho tao";
+			} else if (301 < score && score < 700){
+				item1 = medium[Math.floor(Math.random()*medium.length)];
+				document.getElementById('reward-show').style.display = "block";
+				document.getElementById("show-content1").innerHTML = item1;
+				document.getElementById("show-confirm").innerHTML = "Để confirm nhận quà hãy screenshot màn hình này và gửi cho tao";
+			} else if (701 < score && score < 1000){
+				item1 = big[Math.floor(Math.random()*big.length)];
+				item2 = big[Math.floor(Math.random()*big.length)];
+				document.getElementById('reward-show').style.display = "block";
+				document.getElementById("show-content1").innerHTML = item1;
+				document.getElementById("show-content2").innerHTML = item2;
+				document.getElementById("show-confirm").innerHTML = "Để confirm nhận quà hãy screenshot màn hình này và gửi cho tao. Khi ảnh đã gửi, đó sẽ được coi là lần cuối cùng";
+			};
+			console.log(item1);
+			console.log(item2);
+		});
+	</script>
 </body>
 </html>
