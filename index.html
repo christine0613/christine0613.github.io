@@ -9,42 +9,43 @@
 	<div class="container">
 		<div class="header-container">
 			<header class="page-header">
-				<div class="header-left"></div>
-				<div class="header-right"></div>
+				<ul>
+					<li>Vì tao code vội, nên không protect tất cả các files. Vì thế, mày <span style="color: red;">HÃY TRUNG THỰC VÀ CHỈ LOG IN DUY NHẤT MỘT LẦN!</span></li>
+					<li>Trang web này sẽ được gỡ sau 31/10/2019 11:59PM (GMT +8)</li>
+					<li>Sắp xếp lại từ sau để tìm user ID: dddeoty</li>
+					<li>Password: the hottest doctor in the world (viết hoa các chữ cái đầu)</li>
+				</ul>
 			</header>
 		</div>
-		<div class="notice">
-			<h1>Trước khi bắt đầu, mày phải đọc kĩ cái này: </h1>
-			<ul>
-				<li>Vì tao code vội, nên không protect tất cả các files. Vì thế, mày <span style="color: red;">HÃY TRUNG THỰC VÀ CHỈ LOG IN DUY NHẤT MỘT LẦN!</span></li>
-				<li>Ở phần cuối, mày có thể bấm nút đến khi mày thích, rồi sau đó làm theo hướng dẫn và đó sẽ được coi là lần cuối cùng.</li>
-				<li>Trang web này sẽ được gỡ sau 31/10/2019 11:59PM (GMT +8)</li>
-				<li>Sắp xếp lại từ sau để tìm user ID: dddeoty</li>
-				<li>Password: the hottest doctor in the world (viết hoa các chữ cái đầu)</li>
-			</ul
-		</div>
 		<div class="form-container">
-			<form action="index.html" method="POST">
+			<form>
 				<div class="form-group">
 					<label>User ID: </label>
 					<br>
-					<input type="text" name="user" class="form-control" required>
+					<input type="text" name="user" class="form-control" id="user" required>
 				</div>
 				<div class="form-group">
 					<label>Password: </label>
 					<br>
-					<input type="password" name="password" class="form-control" required>
+					<input type="password" name="password" class="form-control" id="password" required>
 				</div>
-				<input type="submit" name="submit" class="submit-btn">
+				<input type="button" name="submit" class="submit-btn" value="SIGN IN">
 			</form>
 		</div>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+			$('.submit-btn').click(function(){
+				let userId = "teddydo";
+				let password = "DoctorMike";
+
+	    		if($('#user').val() == userId && $('#password').val() == password){
+	    			document.location = 'mainpage.html';
+	    		};
+	  		})
+		</script>
 		
 	</div>
-	<?php
-			if ($userId == "teddydo" && $password == "DoctorMike") {
-				header("Location: mainpage.html");
-				exit;
-			}
-	?>
 </body>
 </html>
